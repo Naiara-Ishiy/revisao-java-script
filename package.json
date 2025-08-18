@@ -5,15 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "javascript",
-    "programação API",
-    "introdução"
-  ],
+  "keywords": ["javascript","programação API","introdução"],
   "author": "Naiara 'Kim'",
   "license": "MIT",
-  "description": "Revisão de l[ógica de programação com Java Script",
-  "dependencies": {
-    "prompt-sync": "^4.2.0"
-  }
+  "description": "Revisão de l[ógica de programação com Java Script"
 }
