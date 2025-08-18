@@ -39,3 +39,8 @@ function ExibeDados()
         Data de fundação: ${enderecoPrefeitura.fundacaoCidade}
 `);}
 ExibeDados();
+
+console.log('');
+console.log('Tipo da variável: ExibeDados');
+console.log(typeof(ExibeDados));
+console.log(Array.isArray(ExibeDados)); //diz se é o tipo de dado ou n
