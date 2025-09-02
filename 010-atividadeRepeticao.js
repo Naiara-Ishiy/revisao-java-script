@@ -1,19 +1,15 @@
+//CONCERTAR
 /*Crie um programa que receba dois números e apresente a contagem de primeiro número até o segundo. caso o segundo número seja maior, a contagem deve ser decrescente. Trate também possíveis erros nos valores digitados*/
 let entrada = require ('prompt-sync')();
 function contarNumeros(){
-    let primeiro, segundo;
 
 while(true){
-let primeiro= prompt ('Escreva um número: ');
-let segundo= prompt ('Escreva outro número: ');
+let primeiro = entrada ('Escreva um número: ');
+let segundo = entrada ('Escreva outro número: ');
 
 const n1 = parseInt(primeiro);
 const n2 = parseInt(segundo);
 const erros = [];
-
-    console.log(nInicio);
-    nInicio++;
-    repeticoes++;
 
 if (isNaN(n1) || isNaN(n2)) {erros.push ("Escreva um número válido")}
 if (n1==n2){erros.push (`Escreva números diferentes`)}
@@ -34,7 +30,7 @@ function contagemCrescente(inicio,fim){console.log('Contagem crescente: ');
 }
 
 function contagemDecrescente(inicio,fim){
-    console.log('Contagem decrescente:');
+    console.log(`Contagem decrescente: ${n2},`);
   for (let i = inicio; i >= fim; i--) {
     console.log(i);
   }

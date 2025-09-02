@@ -7,4 +7,4 @@ while(nInicio<=nFim){
     nInicio++;
     repeticoes++;}
 
-console.log(`O código foi repetido ${repeticoes} vezea!`)
+console.log(`O código foi repetido ${repeticoes} vezes!`)
