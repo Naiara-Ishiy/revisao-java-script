@@ -10,7 +10,7 @@ let senhaDigitada = '';
         if(senhaDigitada !== senha){
             repeticao++;
         if(repeticao = 2){ 
-            bloqueio.push('Você é suspeito, bloqueado.')}
-    } while (senhaDigitada !== senha)};
+            bloqueio.push('Você é suspeito, bloqueado.')}//{break}
+    }} while (senhaDigitada !== senha);
+
 console.log('Bem-vindo ao sistema de login!')
-break;
