@@ -5,6 +5,6 @@ let vInicial = entrada('Digite um número para começar a tabuada: ');
 let vFinal = entrada ('Digite um valor para terminar a tabuada: ');
 let tabuada = vFinal/vInicial;
 
-for (let contador >= parseInt(vInicial), contador = parseInt(vFinal); contador++)
+for (let contador => parseInt(vInicial), contador <= parseInt(vFinal); contador++)
     if (){
     console.log(`${vInicial} X ${tabuada} = ${parseInt(vInicial * tabuada)}`)}
