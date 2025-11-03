@@ -1,38 +1,55 @@
-//CONCERTAR
-/*Crie um programa que receba dois números e apresente a contagem de primeiro número até o segundo. caso o segundo número seja maior, a contagem deve ser decrescente. Trate também possíveis erros nos valores digitados*/
-let entrada = require ('prompt-sync')();
-function contarNumeros(){
+/*
+    Crie um programa que receba dois número 
+    e apresente a contagem de primeiro número até 
+    o segundo. Caso o segundo número seja maior
+    a contagem deve ser decrescente. 
+    Trate também possíveis erros nos valores 
+    digitados.
+*/
 
-while(true){
-let primeiro = entrada ('Escreva um número: ');
-let segundo = entrada ('Escreva outro número: ');
+let entrada = require('prompt-sync')();
 
-const n1 = parseInt(primeiro);
-const n2 = parseInt(segundo);
-const erros = [];
+console.log('PROGRAMA QUE CONTA');
+console.log('');
 
-if (isNaN(n1) || isNaN(n2)) {erros.push ("Escreva um número válido")}
-if (n1==n2){erros.push (`Escreva números diferentes`)}
-if (erros>0){
-    console.log('Erros encontrados: ');
-    erros.forEach(erro=>console.log('- '+erro));
-    continue; //volta para o início do loop
+let num1 = entrada('Digite 1º número: ');
+let num2 = entrada('Digite 2º número: ');
+console.log('');
+
+let erro = [];
+
+if (num1 == '' || num2 == '') {
+    erro.push('Nenhum valor pode ser vazio');
+} else if (isNaN(num1) || isNaN(num2)) {
+    erro.push('O valor digitado deve ser numérico');
+} else {
+    if (num1 === num2) {
+        erro.push('Os número digitados são iguais!');
+    }
 }
 
-if (n1>n2){contagemCrescente (n1,n2)}
-    else {contagemDecrescente(n1,n2)}
-    break; // Sai do loop após contagem
-}
+if (num1.length > 4 || num1.length > 4) {
+    erro.push('O número está muito grande');
 }
 
-function contagemCrescente(inicio,fim){console.log('Contagem crescente: ');
-    for (let i = inicio; i <= fim; i++){console.log(i)}
+if (erro.length > 0) {
+    erro.forEach(mensagem => {
+        console.log(mensagem);
+    });
+} else {
+    let cont = num1;
+    if (num1 < num2){
+        while (cont <= num2) {
+            console.log(cont); 
+            cont++;           
+        }
+    } else {
+        while (cont >= num2) {
+            console.log(cont); 
+            cont--;           
+        }
+    }
 }
 
-function contagemDecrescente(inicio,fim){
-    console.log(`Contagem decrescente: ${n2},`);
-  for (let i = inicio; i >= fim; i--) {
-    console.log(i);
-  }
-}
-contarNumeros(); // Chama a função principal para iniciar o programa
+console.log('');
+entrada('Pressione Enter para encerrar o programa!');
